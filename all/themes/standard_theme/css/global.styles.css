@@ -1,0 +1,1252 @@
+/*
+ * @file
+ * global.styles
+ *
+ * Styles you add here will load for all device sizes, they are "global", as
+ * opposed to "responsive" styles, which only load for a given breakpoint (media
+ * query) that you set in theme settings. See the README for more details.
+ *
+ *
+ * How to use this file:
+ * --------------------
+ *
+ * There are many empty selectors and some basic styles to act as a guide.
+ * Nothing is set in stone and you can change anything - even delete all of it
+ * and start with your own clean slate.
+ *
+ * See global.base also which includes normalize.css and some additional
+ * helper classes and base styles.
+ *
+ *
+ *
+ *  Style precedence in CSS (Specificity, Inheritance, Cascade)
+ *  -----------------------------------------------------------
+ *
+ *  Specificity:    a) Inline Style
+ *  (a,b,c,d)       b) Id
+ *                  c) Class, Pseudo-class, attribute
+ *                  d) Element, pseuo-element
+ *
+ *                          Example: div#sidebar p.bio -> 2 elements, 1 class, 1 id –> (0,1,1,2)
+ *
+ *
+ *  Inheritance:    Elements inherit styles from their parent container.
+                    "inherit" let you inherit margin, padding etc. from parent container.
+ *
+ *
+ *  Cascade:        - Site-Author (these files) OVER Site-User(Style settings in browser) OVER Browser Defaults
+ *                  - !importance has more weight than normal declarations
+ *                  - Equal specificity: last wins
+ *
+ *                  TIP: Normalizing (see above) takes browser defaults and cross browser issues out of equation!!!
+ */
+
+/* =============================================================================
+ *   Colors used for web site
+ * =============================================================================
+    text-black:         #222222
+    text-white:         #eeeeee
+    text-hover:         #888888
+    violett (circle):   #c84288, rgba(200,66,136,1.0)
+    grün (triangle):    #1a8541, rgba(26,133,65,1.0)
+    gelb (square):      #efa63a, rgba(238,166,58,1.0)
+    background:         #ffffff
+
+  =============================================================================*/
+
+
+/* =============================================================================
+ *   General Reset
+ * ========================================================================== */
+
+/*
+ * Main wrapper for most blocks, block_system_main does not have it
+ */
+.block, .block-inner {
+    margin: 0;
+}
+
+/*
+ * Block title
+ */
+.block-title {
+    margin: 0;
+}
+
+/* =============================================================================
+ *   Fonts
+ * ========================================================================== */
+
+@font-face {
+    font-family: 'halis_black';
+    src: url('../fonts/HalisFont/ahmet_altun_-_halisr-black-webfont.eot');
+    src: url('../fonts/HalisFont/ahmet_altun_-_halisr-black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HalisFont/ahmet_altun_-_halisr-black-webfont.woff') format('woff'),
+    url('../fonts/HalisFont/ahmet_altun_-_halisr-black-webfont.ttf') format('truetype'),
+    url('../fonts/HalisFont/ahmet_altun_-_halisr-black-webfont.svg#halis_rblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'halis_regular';
+    src: url('../fonts/HalisFont/ahmet_altun_-_halisr-sregular-webfont.eot');
+    src: url('../fonts/HalisFont/ahmet_altun_-_halisr-sregular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HalisFont/ahmet_altun_-_halisr-sregular-webfont.woff') format('woff'),
+    url('../fonts/HalisFont/ahmet_altun_-_halisr-sregular-webfont.ttf') format('truetype'),
+    url('../fonts/HalisFont/ahmet_altun_-_halisr-sregular-webfont.svg#halis_rs_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SSSocial";
+    src: url('../fonts/ss-social/ss-social-circle.eot');
+    src: url('../fonts/ss-social/ss-social-circle.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ss-social/ss-social-circle.woff') format('woff'),
+    url('../fonts/ss-social/ss-social-circle.ttf') format('truetype'),
+    url('../fonts/ss-social/ss-social-circle.svg#SSSocialCircle') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* =============================================================================
+ *   Base
+ * ========================================================================== */
+
+/*
+ * To preserve theme settings never apply font properties to the HTML element.
+ * This is critically important if you are using the Responsive JavaScript
+ * feature as this relies on being able to set a pseudo font family on the HTML
+ * element. If you need to set default font properties of any kind use the BODY
+ * element as these can be overridden using font theme settings.
+ */
+
+html {
+  background:#fff; /*rgba(28,72,89,0.8);/*#64bb99*/;
+}
+
+
+body {
+    font-family: "halis_regular", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 100%;  /* corresponds to 16px */
+
+}
+
+
+/* =============================================================================
+ *   HTML Elements
+ * ========================================================================== */
+/* and if we have headings with defined styles we'd also add */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;   /* unitless line-height: element multiply this value with its computed font-sizes */
+}
+
+p {
+    font-size: 1em; /* 0.875em relative to a 16px baseline on the body will result in a 14px font size */
+    line-height: 1;     /* unitless line-height: element multiply this value with its computed font-sizes */
+}
+
+
+pre,
+code,
+tt,
+samp,
+kbd,
+var {
+    font-family: Consolas, Monaco, 'Courier New', Courier, monospace, sans-serif;
+}
+
+/* =============================================================================
+ *   Links
+ * ========================================================================== */
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #222222;
+}
+
+a:active,
+a.active,
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #147c8f;
+}
+
+/* =============================================================================
+ *   Wrappers
+ * ========================================================================== */
+#page, .container {
+    position:relative;
+    margin: 0 auto;
+    width:auto;
+    padding: 0;
+}
+
+#header {
+    position: fixed;
+    top: 30px;
+    margin: 0;
+    height: 130px;
+    width: 1280px;
+    max-width: 100%;
+    background-color: #fff;
+    z-index: 10;
+}
+#header .region-header,
+.region-leaderboard > .region-inner {
+    margin: 0 1em;
+    padding: 0;
+}
+
+/*
+ * Menu, columns, Footer wrapper
+ */
+#columns {
+    position: relative;
+    margin: 170px 1em 0;
+}
+#main-content {
+    margin: 0;
+}
+
+#branding {
+    display: none;
+}
+
+
+/* =============================================================================
+ *   AT Regions
+ * ========================================================================== */
+
+/*
+ *   language switcher, user menu, partner menu
+ */
+
+#block-locale-language,
+#block-system-user-menu {
+    display: inline-block;
+    float: right;
+    margin: 0;
+}
+#block-menu-menu-partners {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+
+}
+
+#block-locale-language .block-inner,
+#block-system-user-menu .block-inner,
+#block-menu-menu-partners .block-inner {
+    margin: 0;
+}
+
+.region-leaderboard,
+.region-tertiary-content {
+    margin: 0;
+    font-family: 'halis_regular', Helvetica, sans-serif;
+    font-size: 0.8em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.region-leaderboard {
+    position: fixed;
+    top: 0;
+    height: 30px;
+    width: 1280px;
+    max-width: 100%;
+    background-color: #fff;
+    z-index: 10;
+}
+.region-tertiary-content {
+    margin-top: 1em;
+}
+
+.region-leaderboard ul,
+.region-tertiary-content ul {
+    list-style-type:none;
+    padding:0;
+}
+.region-leaderboard ul {
+    margin: 5px 0 0;
+}
+.region-tertiary-content #block-menu-menu-partners ul {
+    text-align: center;
+}
+
+.region-leaderboard ul li,
+.region-tertiary-content ul li {
+    display:inline-block;
+    padding: 0 0.625em;
+    border-left: 1px solid #147c8f;
+}
+.region-leaderboard #block-locale-language ul li.first,
+.region-tertiary-content ul li.first {
+    border: none;
+}
+
+.region-leaderboard ul li a,
+.region-leaderboard ul li a:visited,
+.region-tertiary-content ul li a,
+.region-tertiary-content ul li a:visited {
+    color: #147c8f;
+    word-wrap: normal;
+}
+
+.region-leaderboard ul li a:hover,
+.region-leaderboard ul li a:active,
+.region-leaderboard ul li a.active,
+.region-leaderboard ul li a:focus,
+.region-tertiary-content ul li a:hover,
+.region-tertiary-content ul li a:focus {
+    color: #147c8f;
+    background: url("images/bottom-border.png") no-repeat center bottom;
+    background-size: 100% 15px;
+}
+
+
+
+/* =============================================================================
+ *   Branding
+ * ========================================================================== */
+
+/*
+ * Wraps all the branding elements, logo, name and slogan
+ */
+#header .region-header .block-region-header {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+}
+/*
+ * Logo
+ */
+.logo {
+    display: inline-block;
+    left: 0;
+    top: 0;
+    width: 120px;
+    padding: 0;
+    margin: 0;
+}
+.logo p {
+    margin: 0;
+}
+.logo img {
+    vertical-align: middle;
+}
+
+/*
+ * Menu
+ */
+nav.block-main-menu ul {
+    margin: 0;
+    padding:0;
+    font-family: 'halis_regular', Helvetica, sans-serif;
+    font-size: 0.9em;
+    line-height: 1.7;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+nav.block-main-menu ul li {
+    list-style: none none;
+    padding: 0 0 0 0.625em;
+}
+
+nav.block-main-menu ul li a,
+nav.block-main-menu ul li a:visited {
+    color: #147c8f;
+}
+
+nav.block-main-menu ul li a:hover,
+nav.block-main-menu ul li a:active,
+nav.block-main-menu ul li a.active,
+nav.block-main-menu ul li a:focus {
+    color: #147c8f);
+    background: url("images/bottom-border.png") no-repeat center bottom;
+    background-size: 100% 15px;
+}
+
+
+
+/* =============================================================================
+ *   Pagers
+ * ========================================================================== */
+
+ul.pager {
+    clear: both;
+    margin: 0;
+    text-align: center;
+}
+
+.item-list ul.pager li {
+    margin: 0;
+}
+
+ul.pager li {
+    background-image: none;
+    display: inline;
+    list-style-type: none;
+    padding: .5em;
+}
+
+ul.pager li.pager-current {
+    font-weight: 700;
+}
+
+.block ul.pager li {
+    margin: 0;
+}
+
+
+/* =============================================================================
+ *   Misc Global Styles
+ * ========================================================================== */
+
+/*
+ * Feed icons
+ */
+.feed-icon {}
+
+/*
+ * Aggregator feed source
+ */
+#aggregator .feed-source .feed-icon {
+    display: inline;
+    float: none;
+    margin-right: 0.625em;
+}
+
+.feed-details dt,
+.feed-details dd {
+    display: inline;
+    margin: 0;
+}
+
+/*
+ * Generic styles for the more link
+ */
+.more-link {}
+
+/*
+ * Generic styles for links. See the ul.links declaration in node and comment stylesheets
+ */
+ul.links {
+    margin: 0;
+    padding: 0;
+}
+
+ul.links.inline {
+    display: block;
+}
+
+ul.links li {
+    display: inline;
+    list-style: none;
+    padding: 0 0.625em 0 0;
+}
+
+/*
+ * Search results are an ordered list so reset the margin
+ */
+.search-results {
+    margin: 0;
+}
+
+/*
+ *  Text areas resizing handlers
+ */
+
+.resizable-textarea .grippie {
+    display: none;
+}
+
+
+/* =============================================================================
+ *   Forms
+ * ========================================================================== */
+
+/*
+ * Wrapper for a form element (or group of form elements) and its label
+ */
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+    border: 1px solid #c00;
+}
+
+#content form {
+    overflow: hidden;  /* Prevents floating form buttons to be outside of form */
+    font-family: 'halis_regular', Helvetica, sans-serif;
+}
+.form-item div.description {
+    padding: 0.2em 0;
+    font-size: 0.8em;
+    color: #147c8f;
+}
+
+.form-item label {
+    display: block;
+    overflow: hidden;
+    padding: 0 0 0.625em;
+    font-size: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    line-height: 1.2;
+    color: #147c8f;
+}
+
+.form-item label span.form-required {
+    color: #cc0461;
+}
+
+.form-item .form-checkboxes,
+.form-item .form-radios {
+    display: block;
+    width: 100%;
+}
+.form-item .form-checkboxes label,
+.form-item .form-radios label {
+    width: auto;
+    vertical-align: middle;
+}
+.form-item .form-checkboxes input,
+.form-item .form-radios input,
+.form-item .form-checkbox,
+.form-item .form-radio {
+    margin: 0;
+}
+.form-item .form-checkboxes .form-item.form-type-checkbox,
+.form-item .form-radios .form-item.form-type-radio {
+    display: inline-block;
+    margin: 0;
+}
+
+.form-item input,
+.form-item textarea {
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.2em;
+    font-family: 'halis_regular', Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.2;
+    color: #147c8f;
+    outline: none;
+    border: 1px solid #147c8f;
+    -moz-border-radius: 0.25em; /* Firefox */
+    -webkit-border-radius: 0.25em; /* Safari and Chrome */
+    border-radius: 0.25em; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+}
+
+.form-item input:focus,
+.form-item textarea:focus {
+    box-shadow: 0 0 0.25em #147c8f;
+    outline: none;
+}
+
+/* file field */
+form .form-managed-file {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+}
+.form-managed-file .form-file {
+    margin: 0 2% 0.625em 0;
+    color: #147c8f;
+}
+.form-managed-file .form-submit {
+    font-size: 0.8em;
+    width: auto;
+    margin-bottom: 0.625em;
+}
+input[type="file"] {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:auto;
+    padding: 0.2em;
+    font-family: 'halis_regular', Helvetica, sans-serif;
+    font-size: 0.8em;
+    line-height: 1;
+    text-transform: uppercase;
+    vertical-align: top;
+    color: #147c8f;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    border-radius: 0.25em;
+    border: 1px solid #147c8f;
+}
+
+
+form .form-actions {
+    margin: 2em 0 2.5em;
+}
+input[type="submit"] {
+    display: inline-block;
+    padding: 0.3em 2em;
+    background-color: #fff;
+    font-size: 0.8em;
+    color: #cc0461;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    line-height: 1.2;
+    border: 2px solid #147c8f;
+    -moz-border-radius: 0.25em; /* Firefox */
+    -webkit-border-radius: 0.25em; /* Safari and Chrome */
+    border-radius: 0.25em; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+
+}
+input[type="submit"]:hover {
+    color:#fff;
+    background: #147c8f;
+}
+
+
+/*
+ *  Form fieldsets
+ */
+form fieldset {
+    position:relative;
+    margin: 1em 0.125em;
+    padding-top: 3em;
+    background-color: rgba(255,255,240,0.5);
+    border: none;
+}
+form fieldset legend {
+    /* position legend inside fieldset */
+    position:absolute;
+    top:10px;
+    left:10px;
+    color: #222;
+    font-size: 1.2em;
+    font-weight: bolder;
+}​
+ form fieldset span.button-operator {
+     display: none;
+ }
+
+/*
+ * Buttons used by contrib modules like Media
+ */
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+
+/*
+ * Password confirmation
+ */
+.password-parent,
+.confirm-parent {
+    margin: 0;
+}
+
+
+/* =============================================================================
+ *   Comment Styling - Comments, comment wrapper, comment form
+ * ========================================================================== */
+
+/*
+ * Wrapper for the list of comments and its titles
+ */
+#comments {
+    overflow: hidden;
+    margin: 0;
+}
+
+#comments h2 {
+    border-bottom: 1px solid rgba(200,66,136,1.0);
+}
+
+#comments h2.comment-form,
+#comments h2.comment-title {
+    margin: 1.25em 0;
+    padding-left: 0.625em;
+    font-weight: normal;
+    color: #222222;
+
+}
+
+/*
+ * Wrapper for a single comment
+ */
+.comment,
+#comments .at-panel {
+    margin: 1.25em 0;
+    padding: 0.625em 0;
+    border-top: 1px solid rgba(200,66,136,1.0);
+}
+
+.comment:first-of-type,
+#comments > .at-panel:first-of-type {
+    border-top: none;
+}
+
+.comment.odd {}
+
+.comment.even {}
+
+
+/*
+ * Comment title
+ */
+.comment-title {
+    margin: 0;
+}
+
+/*
+ * Preview of the comment before submitting new or updated comment
+ */
+#comments .comment-form,
+#comments .comment-preview {
+    overflow: hidden;  /* Prevents floating buttons to be outside form */
+    padding: 0.625em;
+}
+
+/*
+ * "New" marker for comments that are new for the current user
+ */
+.new {
+    color: #c00;
+}
+
+/*
+ * Nested comments are indented
+ */
+.indented {
+    margin-left: 2.5em;
+}
+
+
+/* =============================================================================
+ *   Messages
+ * ========================================================================== */
+
+#messages {
+    margin: 160px 2em 0;
+}
+
+/* Left and right margin are set by the global gutter width */
+div.messages {
+    margin-bottom: 0.625em;
+    margin-top: 0.625em;
+}
+
+div.messages ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+div.status {}
+
+div.warning {}
+
+tr.warning {}
+
+div.error,
+tr.error {}
+
+.error {}
+
+.warning {}
+
+/*
+ * Unpublished nodes
+ */
+.node-unpublished,
+.comment-unpublished {}
+
+.node-unpublished,
+.comment-unpublished {}
+
+.node-unpublished p.unpublished,
+.comment-unpublished p.unpublished {
+    color: pink;
+    color: rgba(239, 170, 170, 0.4);
+    font-family: Impact,"Arial Narrow",Helvetica,sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    height: 0;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    text-align: center;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+/*
+ * Otherwise these elements will appear below the "Unpublished" text
+ */
+.lt-ie8 {}
+
+.lt-ie8 .node-unpublished > *,
+.lt-ie8 .comment-unpublished > * {
+    position: relative;
+}
+
+
+/* =============================================================================
+ *    Maintenance pages
+ * ========================================================================== */
+
+.maintenance-page #header {
+    display: none;
+}
+.maintenance-page #page {
+    margin: 3em;
+    padding: 2.5em 0;
+    font-family: 'halis_regular', Helvetica, sans-serif;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.maintenance-page #site-name,
+.maintenance-page #page-title {
+    margin: 0;
+}
+
+.db-offline {}
+
+.db-offline .container {
+    margin: 0 auto;
+    padding: 2.5em 0;
+    width: 100%;
+    max-width: 960px;
+}
+
+.db-offline div.messages {
+    margin: 1.25em 0 0;
+}
+
+.db-offline #content {
+    padding: 1.25em 0;
+}
+
+
+/* =============================================================================
+ *
+ *
+ *      Site specific element styling starts here...
+ *
+ *
+ * ========================================================================== */
+
+/* ==================================================================================
+ *   Page styling
+ * ================================================================================== */
+/*
+ *  General mitidr-style
+ */
+.view-view-mit-dir-panel .view-content .views-row {
+    /* define a responsive grid */
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 -4px 0 0;
+}
+
+.node-mit-dir .group-image-quote {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 150%;
+    background: url("images/mitdir_banner_weiss.jpg") no-repeat scroll center bottom;
+    background-size: contain;
+}
+body.lang-en .node-mit-dir .group-image-quote {
+    background: url("images/mitdir_banner_weiss_EN.jpg") no-repeat scroll center bottom;
+    background-size: contain;
+}
+body.lang-fr .node-mit-dir .group-image-quote {
+    background: url("images/mitdir_banner_weiss_FR.jpg") no-repeat scroll center bottom;
+    background-size: contain;
+}
+body.lang-rm .node-mit-dir .group-image-quote {
+    background: url("images/mitdir_banner_weiss_RM.jpg") no-repeat scroll center bottom;
+    background-size: contain;
+}
+.node-mit-dir .group-image-quote .field-name-field-picture {
+    width:100%;
+    height: auto;
+}
+.node-mit-dir .group-image-quote .field-name-field-picture img {
+    width: 100%;
+}
+
+
+/*
+ *  Front page filter
+ */
+.block-exposed-filter .views-exposed-widgets {
+    display: inline-block;
+    font-size: 0.8em;
+    margin: 0 0 1em;
+}
+.block-exposed-filter .views-exposed-widgets .views-exposed-widget {
+    display: inline-block;
+    overflow: visible;
+    float: none;
+    padding: 0;
+    width: 9em;
+    vertical-align: bottom;
+}
+.block-exposed-filter .views-exposed-widgets label {
+    margin-bottom: 0.5em;
+    white-space: nowrap;
+    color: #147c8f;
+}
+.block-exposed-filter .views-exposed-widgets .form-text {
+    width: 8.5em;
+}
+
+
+/* =============================================================================
+ *   Mit-Dir full
+ * ========================================================================== */
+.node-mit-dir.node-full {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.node-mit-dir.node-full .at-panel .region .region-inner {
+    margin: 0;
+}
+.node-mit-dir.node-full .group-image-quote .field-name-field-quote {
+    position: absolute;
+    width: 45%;
+    right: 0.5em;
+    top: 72%;
+    font-family: 'halis_black', Helvetica, sans-serif;
+    font-size: 4.2vw;
+    line-height: 1.4;
+    color: #cc0461;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: transparent;
+    z-index: 2;
+}
+.node-mit-dir.node-full .group-image-quote .field-name-field-person-links,
+.node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts {
+    display: block;
+    position: absolute;
+    padding: 0 1em;
+    font-family: 'halis_regular', Helvetica, sans-serif;
+    font-size: 4.5vw;
+    height: 1.2em;
+    line-height: 1.3;
+    text-transform: uppercase;
+    text-align: center;
+}
+.node-mit-dir.node-full .group-image-quote .field-name-field-person-links {
+    left: 1em;
+    top: 55%;
+    color: #fff;
+    background-color: #cc0461;
+}
+.node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts {
+    right: 1em;
+    top: 47%;
+    color: #fff;
+    background-color: #147c8f;
+}
+.node-mit-dir.node-full .field-name-field-person-links-name,
+.node-mit-dir.node-full .field-name-field-person-rechts-name {
+    display: inline-block;
+    font-size: 4.5vw; /* % of viewport width */
+    font-weight: bold;
+    color: #147c8f;
+    text-transform: uppercase;
+    text-align: left;
+    white-space: nowrap;
+}
+.node-mit-dir.node-full .field-name-field-person-links-name .field-item:after {
+    content: " & ";
+    color: #147c8f;
+    white-space: pre;
+}
+
+/* =============================================================================
+ *   ShareThis links block
+ * ========================================================================== */
+.node-mit-dir.node-full .field-name-sharethis-block {
+    margin-top: 1em;
+    border-top: 2px solid #147c8f;
+}
+
+.node-mit-dir.node-full .field-name-sharethis-block h2.field-label {
+    margin: 0.5em 0;
+    width: auto;
+    font-family: 'halis_black', Helvetica, sans-serif;
+    font-size: 3.5vw;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    font-weight: normal;
+    color: #147c8f;
+}
+.block-sharethis .block-inner {
+    margin: 0;
+}
+.sharethis-wrapper {
+    margin: 0;
+    text-align: left;
+}
+.sharethis-wrapper > span .stButton {
+    margin: 0;
+}
+.sharethis-wrapper > span .stButton .stLarge {
+    background-image: none !important;
+    font-size: 2em;
+    color: #147c8f;
+    height: 1.2em;
+}
+.sharethis-wrapper > span .stButton .stLarge:hover {
+    color: #cc0461;
+}
+
+/* Large buttons */
+.st_facebook_large .stButton .stLarge:before {
+    font-family: SSSocial;
+    content: "\f610";
+    display: inline-block;
+    padding: 0.25em 0 0;
+}
+.st_twitter_large .stButton .stLarge:before {
+    font-family: SSSocial;
+    content: "\f611";
+    display: inline-block;
+    padding: 0.25em 0 0;
+}
+.st_googleplus_large .stButton .stLarge:before {
+    font-family: SSSocial;
+    content: "\f613";
+    display: inline-block;
+    padding: 0.25em 0 0;
+}
+.st_email_large .stButton .stLarge:before {
+    font-family: SSSocial;
+    content: "✉";
+    display: inline-block;
+    padding: 0.25em 0 0;
+}
+.st_pinterest_large .stButton .stLarge:before {
+    font-family: SSSocial;
+    content: "\f650";
+    display: inline-block;
+    padding: 0.25em 0 0;
+}
+
+
+
+/* =============================================================================
+ *   Mit-Dir teaser
+ * ========================================================================== */
+.node-mit-dir.node-teaser .at-panel .region .region-inner {
+    margin: 0 0 1em;
+}
+.node-mit-dir.node-teaser .group-image-quote .field-name-field-quote {
+    position: absolute;
+    right: 0.5em;
+    top: 72%;
+    z-index: 2;
+    padding: 0.125em;
+    width: 45%;
+    font-family: 'halis_black', Helvetica, sans-serif;
+    font-size: 4.3vw;
+    line-height: 1.42;
+    color: #cc0461;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+.node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links,
+.node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts {
+    display: block;
+    position: absolute;
+    padding: 0 1em;
+    height: 1.2em;
+    font-family: 'halis_regular', Helvetica, sans-serif;
+    font-size: 4.5vw;
+    line-height: 1.3;
+    text-transform: uppercase;
+    text-align: center;
+}
+.node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links {
+    left: 1em;
+    top: 55%;
+    color: #fff; /*rgb(28,72,89);*/
+    background-color: #cc0461;
+}
+.node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts {
+    right: 1em;
+    top: 47%;
+    color: #fff; /*rgb(255,122,222);*/
+    background-color: #147c8f;
+}
+.node-mit-dir.node-teaser .field-name-field-person-links-name,
+.node-mit-dir.node-teaser .field-name-field-person-rechts-name {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bolder;
+    color: #cc0461;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+}
+.node-mit-dir.node-teaser .field-name-field-person-links-name .field-item:after {
+    content: " & ";
+    white-space: pre;
+}
+
+/*
+ *  Webform
+ */
+.node-webform .at-panel .region .region-inner {
+    margin: 0;
+}
+.webform-client-form {
+    width: 100%;
+}
+.webform-client-form .webform-component {
+    margin: 1.5em 0;
+}
+.node-webform .field-name-field-picture .field-label {
+    margin-top: 0;
+    font-size: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    line-height: 1.2;
+    color: #147c8f;
+}
+
+/*
+ *  About page
+ */
+.node-page.node-full .field-name-body {
+    margin: 1em 0 0;
+    font-family: 'halis_regular', Helvetica, sans-serif;
+    font-size: 1.4em;
+}
+.node-page.node-full .field-name-body a {
+    text-decoration: underline;
+}
+
+
+/* =============================================================================
+ *
+ *
+ *      Administrator mode specific element styling starts here...
+ *
+ *
+ * ========================================================================== */
+
+/*
+ * Admin menu overrides
+ */
+#admin-menu {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Devel Module
+ */
+.dev-query {
+    background: #eee;
+    padding: 2em;
+}
+
+/*
+ * Styleguide module tweaks
+ */
+#styleguide-header {
+    padding: 0 0.625em;
+}
+
+#styleguide-header .item-list {
+    font-family: inherit;
+    margin: 0 1.25em 1.25em 0;
+    min-height: 260px;
+    width: auto;
+}
+
+#tasks {
+    margin-bottom: 1em;
+}
+
+
+/* =============================================================================
+ *   Tabs (local tasks)
+ * ========================================================================== */
+
+ul.primary {
+    border-bottom-color: #ccc;
+    margin: 1.25em 0;
+    padding: 0 0 0 5px;
+}
+
+ul.primary li {
+    display: block;
+    float: left;
+    margin: 0 1px -1px;
+}
+
+ul.primary li a {
+    background-color: #f5f5f5;
+    border-color: #ccc;
+    margin-right: 1px;
+    padding: 0 0.625em;
+    display: block;
+    float: left;
+    height: 1.5em;
+    line-height: 1.5em;
+}
+
+ul.primary li a:hover,
+ul.primary li a:focus {
+    background-color: #eee;
+    border-color: #ccc;
+}
+
+ul.primary li.active a,
+ul.primary li.active a:hover,
+ul.primary li.active a:focus {
+    background-color: #fff;
+    border-bottom-color: #fff;
+}
+
+ul.secondary {
+    border-bottom: 1px solid #ccc;
+    margin: 1em 0 0;
+    padding: 0 .3em 1em;
+}
+
+ul.secondary li {
+    border-right: 0;
+    list-style: none;
+    padding: 0 0.625em 0 0;
+}
+
+ul.secondary li a {}
+
+ul.secondary li a:hover,
+ul.secondary li a.active {
+    border-bottom: none;
+    text-decoration: underline;
+}
+

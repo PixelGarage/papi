@@ -1,0 +1,163 @@
+/*
+ * responsive.custom.css is for custom media queries that are not set via the
+ * theme settings, such as cascading media queries.
+ *
+ * By default all the other responsive stylesheets used in Adaptivetheme use a
+ * "stacking method", however cascading media queries use a waterfall method so
+ * you can leverage the cascade and inheritance for all browsers that support
+ * media queries, regardless of screen size.
+ *
+ * @SEE http://zomigi.com/blog/essential-considerations-for-crafting-quality-media-queries/#mq-overlap-stack
+ *
+ * NOTE: this file loads by default, to disable got to your theme settings and
+ * look under the "CSS" settings tab.
+ */
+
+@media screen and (min-width: 30em) { /* >= 480 px */
+    /* menu and title font size */
+    .region-leaderboard,
+    .region-tertiary-content {
+        font-size: 0.9em;
+    }
+    nav.block-main-menu ul {
+        margin: -2px 0 0;
+        font-size: 1.25em;
+        line-height: 1.5;
+    }
+
+    /* responsive grid */
+    .view-view-mit-dir-panel .view-content .views-row {
+        width: 50%;
+    }
+    .node-mit-dir.node-teaser .at-panel .region .region-inner {
+        margin: 0 0.75em 1em;
+    }
+    .node-mit-dir.node-full .at-panel .region-two-50-first .region-inner {
+        margin: 0 1em 0 0.75em;
+    }
+    .node-mit-dir.node-full .at-panel .region-two-50-second .region-inner {
+        margin: 0 0.75em 0 1em;
+    }
+    #header .region-header,
+    .region-leaderboard > .region-inner {
+        margin: 0 1.75em;
+    }
+    .block-exposed-filter .views-exposed-widgets {
+        margin: 0 0.75em 1em;
+    }
+
+    /* font-size node-mit-dir full */
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-full .field-name-field-person-links-name,
+    .node-mit-dir.node-full .field-name-field-person-rechts-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-quote {
+        font-size: 1.9vw;
+    }
+    .node-mit-dir.node-full .field-name-sharethis-block h2.field-label {
+        font-size: 1.7vw;
+    }
+
+    /* font-size node-mit-dir teaser */
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-quote {
+        font-size: 2.2vw;
+    }
+
+    /* webform, basic page */
+    .node-webform .at-panel .region .region-inner,
+    .page-node-done .webform-confirmation,
+    .node-page .at-panel .region .region-inner {
+        margin: 0 1em;
+    }
+
+}
+
+@media screen and (min-width: 48em) { /* >= 768 px */
+    /* responsive grid */
+    .view-view-mit-dir-panel .view-content .views-row {
+        width: 33.3333%;
+    }
+
+    /* font-size node-mit-dir full */
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-full .field-name-field-person-links-name,
+    .node-mit-dir.node-full .field-name-field-person-rechts-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-quote {
+        font-size: 2vw;
+    }
+    .node-mit-dir.node-full .field-name-sharethis-block h2.field-label {
+        font-size: 1.8vw;
+    }
+
+    /* font-size node-mit-dir teaser */
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-quote {
+        font-size: 1.5vw;
+    }
+
+}
+
+@media screen and (min-width: 64em) { /* >= 1024 px */
+    /* node full width */
+    .node-mit-dir.node-full,
+    .node-webform {
+        width: 75%;
+    }
+
+    /* responsive grid */
+    .view-view-mit-dir-panel .view-content .views-row {
+        width: 25%;
+    }
+
+    /* font-size node-mit-dir full */
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-full .field-name-field-person-links-name,
+    .node-mit-dir.node-full .field-name-field-person-rechts-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-quote {
+        font-size: 1.5vw;
+    }
+    .node-mit-dir.node-full .field-name-sharethis-block h2.field-label {
+        font-size: 1.3vw;
+    }
+
+    /* font-size node-mit-dir teaser */
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-quote {
+        font-size: 1.1vw;
+    }
+
+}
+
+@media screen and (min-width: 80em) {  /* >= 1280 px */
+    /* font-size node-mit-dir full */
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-full .field-name-field-person-links-name,
+    .node-mit-dir.node-full .field-name-field-person-rechts-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-quote {
+        font-size: 1.2em;
+    }
+    .node-mit-dir.node-full .field-name-sharethis-block h2.field-label {
+        font-size: 1em;
+    }
+
+    /* font-size node-mit-dir teaser */
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-quote {
+        font-size: 0.95em;
+    }
+
+    .node-webform,
+    .webform-confirmation,
+    .node-page {
+        font-size: 1.2em;
+    }
+}
+
