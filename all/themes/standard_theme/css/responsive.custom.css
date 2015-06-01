@@ -47,10 +47,8 @@
     }
 
     /* font-size node-mit-dir full */
-    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links,
-    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts,
-    .node-mit-dir.node-full .field-name-field-person-links-name,
-    .node-mit-dir.node-full .field-name-field-person-rechts-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts-name,
     .node-mit-dir.node-full .group-image-quote .field-name-field-quote {
         font-size: 1.9vw;
     }
@@ -59,8 +57,8 @@
     }
 
     /* font-size node-mit-dir teaser */
-    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links,
-    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links-name,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts-name,
     .node-mit-dir.node-teaser .group-image-quote .field-name-field-quote {
         font-size: 2.2vw;
     }
@@ -81,10 +79,8 @@
     }
 
     /* font-size node-mit-dir full */
-    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links,
-    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts,
-    .node-mit-dir.node-full .field-name-field-person-links-name,
-    .node-mit-dir.node-full .field-name-field-person-rechts-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts-name,
     .node-mit-dir.node-full .group-image-quote .field-name-field-quote {
         font-size: 2vw;
     }
@@ -93,8 +89,8 @@
     }
 
     /* font-size node-mit-dir teaser */
-    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links,
-    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links-name,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts-name,
     .node-mit-dir.node-teaser .group-image-quote .field-name-field-quote {
         font-size: 1.5vw;
     }
@@ -114,10 +110,8 @@
     }
 
     /* font-size node-mit-dir full */
-    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links,
-    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts,
-    .node-mit-dir.node-full .field-name-field-person-links-name,
-    .node-mit-dir.node-full .field-name-field-person-rechts-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts-name,
     .node-mit-dir.node-full .group-image-quote .field-name-field-quote {
         font-size: 1.5vw;
     }
@@ -126,8 +120,8 @@
     }
 
     /* font-size node-mit-dir teaser */
-    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links,
-    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links-name,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts-name   ,
     .node-mit-dir.node-teaser .group-image-quote .field-name-field-quote {
         font-size: 1.1vw;
     }
@@ -136,10 +130,8 @@
 
 @media screen and (min-width: 80em) {  /* >= 1280 px */
     /* font-size node-mit-dir full */
-    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links,
-    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts,
-    .node-mit-dir.node-full .field-name-field-person-links-name,
-    .node-mit-dir.node-full .field-name-field-person-rechts-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-links-name,
+    .node-mit-dir.node-full .group-image-quote .field-name-field-person-rechts-name,
     .node-mit-dir.node-full .group-image-quote .field-name-field-quote {
         font-size: 1.2em;
     }
@@ -148,8 +140,8 @@
     }
 
     /* font-size node-mit-dir teaser */
-    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links,
-    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-links-name,
+    .node-mit-dir.node-teaser .group-image-quote .field-name-field-person-rechts-name,
     .node-mit-dir.node-teaser .group-image-quote .field-name-field-quote {
         font-size: 0.95em;
     }
