@@ -178,7 +178,7 @@ a:focus {
     position: fixed;
     top: 30px;
     margin: 0;
-    height: 190px;
+    height: 200px;
     width: 1280px;
     max-width: 100%;
     background-color: #fff;
@@ -363,13 +363,22 @@ nav.block-main-menu ul li a:focus {
 
 #header .region-header #block-webform-client-block-2036 {
     display: block;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 #header .region-header #block-webform-client-block-2036 .webform-component {
     display: inline-block;
     margin: 0 20px 0 0;
     vertical-align: bottom;
 }
+
+#header .region-header #block-webform-client-block-2036 .webform-component-fieldset {
+    display: block;
+    margin: 0 15px 10px 0;
+    vertical-align: middle;
+    background-color: transparent;
+    padding: 0;
+}
+
 #header .region-header #block-webform-client-block-2036 .form-actions {
     display: inline-block;
     margin: 0;
