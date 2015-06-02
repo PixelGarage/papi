@@ -31,6 +31,10 @@
         max-width: 200px;
     }
 
+    #header .region-header #block-webform-client-block-2036 .webform-component-fieldset {
+        font-size: 1em;
+    }
+
     .region-leaderboard,
     .region-tertiary-content {
         font-size: 0.9em;

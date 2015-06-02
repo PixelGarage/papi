@@ -376,6 +376,7 @@ nav.block-main-menu ul li a:focus {
     display: block;
     margin: 0 15px 10px 0;
     vertical-align: middle;
+    font-size: 0.9em;
     background-color: transparent;
     padding: 0;
 }
