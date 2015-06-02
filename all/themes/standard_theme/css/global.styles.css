@@ -178,7 +178,7 @@ a:focus {
     position: fixed;
     top: 30px;
     margin: 0;
-    height: 200px;
+    height: 190px;
     width: 1280px;
     max-width: 100%;
     background-color: #fff;
@@ -195,7 +195,7 @@ a:focus {
  */
 #columns {
     position: relative;
-    margin: 210px 1em 0;
+    margin: 220px 1em 0;
 }
 #main-content {
     margin: 0;
@@ -317,7 +317,6 @@ a:focus {
     display: inline-block;
     left: 0;
     top: 0;
-    width: 120px;
     padding: 0;
     margin: 0;
 }
@@ -325,6 +324,7 @@ a:focus {
     margin: 0;
 }
 .logo img {
+    max-width: 120px;
     vertical-align: middle;
 }
 
@@ -367,7 +367,8 @@ nav.block-main-menu ul li a:focus {
 }
 #header .region-header #block-webform-client-block-2036 .webform-component {
     display: inline-block;
-    margin: 0 20px 0 0;
+    width: 45%;
+    margin: 0 5% 0 0;
     vertical-align: bottom;
 }
 
@@ -1077,7 +1078,7 @@ body.lang-rm .node-mit-dir .group-image-quote {
     top: 72%;
     z-index: 2;
     padding: 0.125em;
-    width: 45%;
+    width: 40%;
     font-family: 'americantypewriter', Helvetica, sans-serif;
     font-size: 4.3vw;
     line-height: 1.42;

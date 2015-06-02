@@ -15,6 +15,22 @@
 
 @media screen and (min-width: 30em) { /* >= 480 px */
     /* menu and title font size */
+    .logo img {
+        max-width: 150px;
+    }
+
+
+    /* E-Mail field Header */
+    #header .region-header #block-webform-client-block-2036 {
+        margin: 0 5px 0 0;
+    }
+
+    #header .region-header #block-webform-client-block-2036 .webform-component {
+        display: inline-block;
+        margin: 0 20px 0 0;
+        max-width: 200px;
+    }
+
     .region-leaderboard,
     .region-tertiary-content {
         font-size: 0.9em;
@@ -73,6 +89,11 @@
 }
 
 @media screen and (min-width: 48em) { /* >= 768 px */
+    /* logo */
+    .logo img {
+        max-width: 167px;
+    }
+
     /* responsive grid */
     .view-view-mit-dir-panel .view-content .views-row {
         width: 33.3333%;
