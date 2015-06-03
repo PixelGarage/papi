@@ -35,7 +35,7 @@
                 // a system message is contained in the body, reduce margin for columns
                 $("#columns").css("margin-top", "20px");
             } else {
-                $("#columns").css("margin-top", "220px");
+                $("#columns").css("margin-top", "200px");
             }
         }
     };

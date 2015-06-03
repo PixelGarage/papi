@@ -176,9 +176,9 @@ a:focus {
 
 #header {
     position: fixed;
-    top: 30px;
-    margin: 0;
-    height: 190px;
+    top: 0;
+    margin: 10px 0 0;
+    height: 160px;
     width: 1280px;
     max-width: 100%;
     background-color: #fff;
@@ -195,7 +195,7 @@ a:focus {
  */
 #columns {
     position: relative;
-    margin: 220px 1em 0;
+    margin: 200px 1em 0;
 }
 #main-content {
     margin: 0;
@@ -335,8 +335,8 @@ nav.block-main-menu ul {
     margin: 0;
     padding:10px 0;
     font-family: 'americantypewriter', Helvetica, sans-serif;
-    font-size: 0.9em;
-    line-height: 1.7;
+    font-size: 0.7em;
+    line-height: 1.6;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -344,6 +344,22 @@ nav.block-main-menu ul {
 nav.block-main-menu ul li {
     list-style: none none;
     padding: 0 0 0 0.625em;
+}
+
+nav.block-main-menu ul li.menu-facebook {
+    display: inline-block;
+}
+
+nav.block-main-menu ul li.menu-twitter {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+nav.block-main-menu ul li.menu-twitter:before {
+    content: "/";
+    padding-right: 5px;
+    display: inline-block;
 }
 
 nav.block-main-menu ul li a,
@@ -363,7 +379,7 @@ nav.block-main-menu ul li a:focus {
 
 #header .region-header #block-webform-client-block-2036 {
     display: block;
-    margin: 20px 0;
+    margin: 5px 0;
 }
 #header .region-header #block-webform-client-block-2036 .webform-component {
     display: inline-block;
