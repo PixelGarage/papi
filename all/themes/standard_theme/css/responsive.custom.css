@@ -19,6 +19,9 @@
         max-width: 140px;
     }
 
+    #header {
+        margin: 25px;
+    }
 
     /* E-Mail field Header */
     #header .region-header #block-webform-client-block-2036 {

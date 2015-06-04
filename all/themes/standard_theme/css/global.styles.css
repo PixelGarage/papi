@@ -177,7 +177,7 @@ a:focus {
 #header {
     position: fixed;
     top: 0;
-    margin: 10px 0 0;
+    margin: 20px 0 0;
     height: 160px;
     width: 1280px;
     max-width: 100%;
